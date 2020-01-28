@@ -1,0 +1,87 @@
+html {
+  background: #018ded url(http://unsplash.it/1500/1000?image=881&blur=5);
+  background-size: cover;
+  font-family: "helvetica neue";
+  text-align: center;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+}
+
+#canvas {
+    border-radius: 50%;
+    position: absolute;
+    left: -3%;
+    top: -2%;
+}
+
+.clock {
+  width: 30rem;
+  height: 30rem;
+  border: 20px solid #ffffff;
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+    inset 0 0 10px #000000, 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px); /* account for the height of the clock hands */
+}
+
+.circle {
+    width: 3rem;
+    height: 3rem;
+    background-color: #efefef;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), inset 0 0 3px 5px #ffffff;
+    z-index: 1000;
+}
+
+.hand {
+  background: #111111;
+  position: absolute;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  box-shadow: 0px 1px 30px #444444;
+  transition: all 0.1s;
+  transform-origin: 100%;
+  transition-timing-function: cubic-bezier(0.5, 2, 0.8, 1.3);
+}
+.second-hand {
+  width: 45%;
+  height: 5px;
+  top: 50%;
+  left: 5%;
+  z-index: 900;
+}
+.hour-hand {
+    width: 35%;
+    height: 7px;
+    top: 50%;
+    left: 15%;
+    z-index: 800;
+}
+.min-hand {
+    width: 40%;
+    height: 6px;
+    top: 50%;
+    left: 10%;
+    z-index: 700;
+}
